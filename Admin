@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+
+class Admin {
+    ArrayList<String> users = new ArrayList<>();
+    ArrayList<String> courses = new ArrayList<>();
+
+    void addUser(String u) { 
+        users.add(u); 
+        System.out.println(u + " added.");
+    }
+
+    void removeUser(String u) { 
+        users.remove(u); 
+        System.out.println(u + " removed.");
+    }
+
+    void viewUsers() { 
+        System.out.println("Users: " + users); 
+    }
+
+    void addCourse(String c) { 
+        courses.add(c); 
+        System.out.println(c + " course added.");
+    }
+
+    void removeCourse(String c) { 
+        courses.remove(c); 
+        System.out.println(c + " course removed.");
+    }
+
+    void viewCourses() { 
+        System.out.println("Courses: " + courses); 
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Admin a = new Admin();
+
+        a.addUser("Alice");
+        a.addUser("Bob");
+        a.viewUsers();
+        a.removeUser("Bob");
+        a.viewUsers();
+
+        a.addCourse("Java");
+        a.addCourse("Python");
+        a.viewCourses();
+        a.removeCourse("Java");
+        a.viewCourses();
+    }
+}
